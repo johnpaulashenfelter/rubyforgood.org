@@ -29,6 +29,24 @@ managers for your convenience.
 - NodeJS 16.1.0
 - NPM 7.22.0
 
+### Problems with OpenSSL
+If you get
+```
+linking shared-object rubyeventmachine.bundle
+Undefined symbols for architecture arm64:
+  "_SSL_get1_peer_certificate", referenced from:
+      SslBox_t::GetPeerCert() in ssl.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [rubyeventmachine.bundle] Error 1
+
+make failed, exit code 2
+```
+you might try
+```
+bundle config build.eventmachine --with-ssl-dir=/opt/homebrew/opt/openssl@3
+```
+
 ## Useful Commands
 
 To run the website locally, type `npm run test` in your terminal and navigate to
