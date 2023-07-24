@@ -29,6 +29,7 @@ categories:
     community building,
     foster care,
     youth issues,
+    healthcare,
   ]
 ---
 
