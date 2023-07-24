@@ -44,7 +44,7 @@ make failed, exit code 2
 ```
 you might try
 ```
-bundle config build.eventmachine --with-ssl-dir=/opt/homebrew/opt/openssl@3
+bundle config build.eventmachine --with-ssl-dir=/opt/homebrew/opt/openssl@3 --local
 ```
 
 ## Useful Commands
